@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.improvelectronics.sync.androidsdk.test" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.improvelectronics.sync.androidsdk.test"
+        android:targetPackage="com.improvelectronics.sync.androidsdk.test" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+
+        <service android:name="com.improvelectronics.sync.android.SyncStreamingService" />
+        <service android:name="com.improvelectronics.sync.android.SyncFtpService" />
+    </application>
+
+</manifest>
